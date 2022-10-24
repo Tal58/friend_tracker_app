@@ -27,7 +27,7 @@ function Pages() {
       <Card.Title>
       E-mail: {person.Mail}
       </Card.Title>
-      <Button onClick={()=> navigate("/friend_tracker_app/")} variant="success">Home Page</Button>
+      <Button onClick={()=> navigate("/")} variant="success">Home Page</Button>
     </Card.Body>
   </Card>
   </div>

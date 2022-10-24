@@ -8,8 +8,8 @@ function App() {
     <div className="App">
    
     <Routes>   
-      <Route path="friend_tracker_app/:name" element={<Pages />} />
-      <Route path="friend_tracker_app/" element={<Assets />} />
+      <Route path="/:name" element={<Pages />} />
+      <Route path="/" element={<Assets />} />
     </Routes>  
     </div>
   );

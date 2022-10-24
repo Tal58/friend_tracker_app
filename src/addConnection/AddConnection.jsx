@@ -24,7 +24,7 @@ function AddConnection({addPerson}) {
       {addPerson.map((person, i) =>{
         const {Name , Surname, Age, Phone, Country, Img2, Arm, Img} = person
         return(
-        <tr typeof="button" onClick={()=>navigate(`/friend_tracker_app/${Name}`, {state:person})} key={i}>
+        <tr typeof="button" onClick={()=>navigate(`/${Name}`, {state:person})} key={i}>
           <td>{i+1}</td>
           <td>{Name}</td>
           <td>{Surname}</td>
