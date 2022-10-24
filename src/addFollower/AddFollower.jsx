@@ -18,20 +18,24 @@ function AddFollower({addFollower}) {
           <th>First Name</th>
           <th>Last Name</th>
           <th>Age</th>
-          <th>Phone Number</th>
+          <th>Photo</th>
           <th>Country</th>
         </tr>
       </thead>
       <tbody>
       {addFollower.map((person, i) =>{
-         const {Name , Surname, Age, Phone, Country, Img2, Arm} = person
+         const {Name , Surname, Age, Phone, Country, Img2, Arm, Img} = person
          return (
         <tr typeof="button"onClick={()=>navigate(`/friend_tracker_app/${Name}`, {state:person})} key={i}>
           <td>{i+1}</td>
           <td>{Name}</td>
           <td>{Surname}</td>
           <td>{Age}</td>
-          <td>{Phone}</td>
+          <td>  <img
+                  src={Img}
+                  className="d-block img-thumbnai face"
+                  alt="..."
+                /></td>
           <td>  <img
                   src={Img2}
                   className="d-block img-thumbnai"
