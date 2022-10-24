@@ -26,6 +26,7 @@ function AddConnection({addPerson}) {
       {addPerson.map((person, i) =>{
         const {Name , Surname, Age, Phone, Country, Img2, Arm, Img} = person
         return(
+            //in order to navigate another page via router, useNavigate hook is used and also at the same time the data sends to the pages component
         <tr typeof="button" onClick={()=>navigate(`/friend_tracker_app/${Name}`, {state:person})} key={i}>
           <td>{i+1}</td>
           <td>{Name}</td>

@@ -1,8 +1,9 @@
-import {useParams, useLocation, useNavigate} from "react-router-dom"
+import {useLocation, useNavigate} from "react-router-dom"
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 function Pages() {
+  //ın order to get all info from navigate hook, useLocation hook is used
     const {state:person} = useLocation()
     const navigate = useNavigate()
     console.log(person)
