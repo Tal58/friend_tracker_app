@@ -53,7 +53,7 @@ Build aFriend Tracker Application using ReactJS.
 
 - Use git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
-🔗 <b>To see live version<b> 🎯https://tal58.github.io/programming_language_cards_with_react/
+🔗 <b>To see live version<b> 🎯https://tal58.github.io/friend_tracker_app/
 
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
