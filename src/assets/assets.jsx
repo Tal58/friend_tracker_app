@@ -15,25 +15,26 @@ const Assets = () => {
   const [person, setPerson] = useState();
   const [addPerson, setAddPerson] = useState(() => {
     // getting stored value
-    const saved = localStorage.getItem('addPerson')
+    const saved = localStorage.getItem("addPerson");
     console.log(saved);
-    if (saved ==="undefined"){
-      return undefined
-    } else{
+    //check local storage
+    if (saved === "undefined") {
+      return undefined;
+    } else {
       const initialValue = JSON.parse(saved);
-    return initialValue
+      return initialValue;
     }
-    
   });
-  
+
   const [addFollower, setAddFollower] = useState(() => {
     // getting stored value
-    const saved = localStorage.getItem('addFollower')
-    if (saved === "undefined"){
-      return undefined
-    } else{
+    const saved = localStorage.getItem("addFollower");
+    //check local storage
+    if (saved === "undefined") {
+      return undefined;
+    } else {
       const initialValue = JSON.parse(saved);
-    return initialValue
+      return initialValue;
     }
   });
   const [loading, setLoading] = useState(true);
@@ -47,20 +48,22 @@ const Assets = () => {
     }
     setTimeout(setLoading(false), 1000);
   };
-
+//ın order to prevent rerendering 
   useEffect(() => {
     getData();
   }, []);
+  //in order to keep side effects of the variables named addPerson and addFollower
   useEffect(() => {
-    setAddFollower(addFollower)
-    setAddPerson(addPerson)
-    localStorage.setItem('addPerson', JSON.stringify(addPerson));
-    localStorage.setItem('addPerson', JSON.stringify(addFollower));
+    setAddFollower(addFollower);
+    setAddPerson(addPerson);
+    localStorage.setItem("addPerson", JSON.stringify(addPerson));
+    localStorage.setItem("addFollower", JSON.stringify(addFollower));
   }, [addFollower, addPerson]);
   const add = () => {
     if (addPerson) {
       let counter = 0;
       addPerson.map((item) => {
+        //to check the list if it has already added it will neglect
         if (item["Name"] === person?.results[0]["name"]["first"]) {
           counter++;
         }
@@ -78,7 +81,7 @@ const Assets = () => {
             Mail: person?.results[0]["email"],
             Country: person?.results[0]["location"]["country"],
             Img2: document.querySelector(".flag").textContent,
-            Arm: document.querySelector(".arm").textContent
+            Arm: document.querySelector(".arm").textContent,
           },
         ]);
       }
@@ -93,25 +96,27 @@ const Assets = () => {
           Mail: person?.results[0]["email"],
           Country: person?.results[0]["location"]["country"],
           Img2: document.querySelector(".flag").textContent,
-          Arm: document.querySelector(".arm").textContent
+          Arm: document.querySelector(".arm").textContent,
         },
       ]);
     }
-    localStorage.setItem('addPerson', JSON.stringify(addPerson));
+    localStorage.setItem("addPerson", JSON.stringify(addPerson));
   };
   const deleteConnection = () => {
     setAddPerson();
-    localStorage.setItem('addPerson', JSON.stringify(addPerson));
+    localStorage.setItem("addPerson", JSON.stringify(addPerson));
   };
 
+  //reset all info about following list
   const deleteFollowing = () => {
     setAddFollower();
-    localStorage.setItem('addFollower', JSON.stringify(addFollower));
+    localStorage.setItem("addFollower", JSON.stringify(addFollower));
   };
   const follow = () => {
     if (addFollower) {
       let counter = 0;
       addFollower.map((item) => {
+            //to check the list if it has already added it will neglect
         if (item["Name"] === person?.results[0]["name"]["first"]) {
           counter++;
         }
@@ -129,7 +134,7 @@ const Assets = () => {
             Mail: person?.results[0]["email"],
             Country: person?.results[0]["location"]["country"],
             Img2: document.querySelector(".flag").textContent,
-            Arm: document.querySelector(".arm").textContent
+            Arm: document.querySelector(".arm").textContent,
           },
         ]);
       }
@@ -144,17 +149,17 @@ const Assets = () => {
           Mail: person?.results[0]["email"],
           Country: person?.results[0]["location"]["country"],
           Img2: document.querySelector(".flag").textContent,
-          Arm: document.querySelector(".arm").textContent
+          Arm: document.querySelector(".arm").textContent,
         },
       ]);
     }
-    localStorage.setItem('addFollower', JSON.stringify(addFollower));
+    localStorage.setItem("addFollower", JSON.stringify(addFollower));
   };
-  localStorage.setItem('addFollower', JSON.stringify(addFollower));
-  localStorage.setItem('addFollower', JSON.stringify(addPerson));
-  console.log(addPerson)
-  console.log(addFollower)
-  return ( 
+  localStorage.setItem("addFollower", JSON.stringify(addFollower));
+  localStorage.setItem("addPerson", JSON.stringify(addPerson));
+  console.log(addPerson);
+  console.log(addFollower);
+  return (
     <div className="container row">
       <div className="card-body col-md-5">
         {loading === true ? (

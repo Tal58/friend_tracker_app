@@ -3,10 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 function AddFollower({addFollower}) {
   console.log(addFollower);
+   //in order to use router we use useNavigate hook and assign it to variable
   const navigate = useNavigate()
-
-
-
+    //return shows the list of connection
   return (addFollower &&
     <div className="connection ">
     <h2>Following List</h2>
