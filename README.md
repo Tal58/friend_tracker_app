@@ -49,7 +49,7 @@ Build aFriend Tracker Application using ReactJS.
 
 ### At the end of the project;
 
-- Improve coding skills within HTML & CSS & JS & ReactJS. useNavigate, useEffect, useState, useLocation, useNavigate hooks are used in the project.
+- Improve coding skills within HTML & CSS & JS & ReactJS. useEffect, useState, useLocation, useNavigate hooks are used in the project.
 
 - Use git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
