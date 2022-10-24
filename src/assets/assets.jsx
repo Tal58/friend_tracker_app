@@ -39,6 +39,7 @@ const Assets = () => {
   });
   const [loading, setLoading] = useState(true);
   const url = "https://randomuser.me/api/";
+      //receive all data via axios
   const getData = async () => {
     try {
       const { data } = await axios(url);
@@ -155,6 +156,7 @@ const Assets = () => {
     }
     localStorage.setItem("addFollower", JSON.stringify(addFollower));
   };
+  //In order to keep all datas in the local storage, following code is used
   localStorage.setItem("addFollower", JSON.stringify(addFollower));
   localStorage.setItem("addPerson", JSON.stringify(addPerson));
   console.log(addPerson);

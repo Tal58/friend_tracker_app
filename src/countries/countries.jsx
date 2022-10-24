@@ -9,15 +9,17 @@ function Countries({ country }) {
   const [loading, setLoading] = useState(true)
   const fetchAllCountry = async () => {
     const url = `https://restcountries.com/v3.1/all`;
+    //receive all data via axios
     await axios(url)
       .then((res) => {
         setCountries(res.data);
       })
       .then(() => flagList())
       .catch((err) => console.log(err));
+      //setTimeout is used to prevent loading image backgorund defects
       setTimeout(setLoading(false),1000)
   };
-
+//initialize the countries flag and its coat of arms
   const flagList = async () => {
     countries?.some((item) => {
       if (item.name.common === country) {
@@ -26,6 +28,7 @@ function Countries({ country }) {
       }
     });
   };
+  //to catch the side effects of functions
   useEffect(() => {
     fetchAllCountry();
     flagList();
