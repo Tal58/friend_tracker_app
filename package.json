@@ -1,6 +1,6 @@
 {
   "homepage": "https://tal58.github.io/friend_tracker_app/",
-  "name": "random_user_app",
+  "name": "friend_tracker_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
