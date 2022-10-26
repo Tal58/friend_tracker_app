@@ -33,7 +33,7 @@ function Countries({ country }) {
     fetchAllCountry();
     flagList();
   });
-  setTimeout(flagList, 0);
+
   return (
     loading === true ? (
       <div className="loading">

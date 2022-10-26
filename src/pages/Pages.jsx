@@ -21,12 +21,12 @@ function Pages() {
       <Card.Img variant="img-thumbnai" src={person.Img} />
    
     <Card.Body>
-      <Card.Title>Name: {person.name} Surname: {person.Surname}</Card.Title>
+      <Card.Title><b>Name:</b>{person.Name} <b>Surname:</b> {person.Surname}</Card.Title>
       <Card.Title>
-      Phone Number: {person.Phone}
+      <b> Phone Number:</b>{person.Phone}
       </Card.Title>
       <Card.Title>
-      E-mail: {person.Mail}
+        <b>E-mail:</b>{person.Mail}
       </Card.Title>
       <Button onClick={()=> navigate("/friend_tracker_app/")} variant="success">Home Page</Button>
     </Card.Body>
