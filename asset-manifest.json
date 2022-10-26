@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/friend_tracker_app/static/css/main.502d3e52.css",
-    "main.js": "/friend_tracker_app/static/js/main.379daf2d.js",
+    "main.js": "/friend_tracker_app/static/js/main.c8865585.js",
     "static/js/787.f6d1d568.chunk.js": "/friend_tracker_app/static/js/787.f6d1d568.chunk.js",
     "index.html": "/friend_tracker_app/index.html",
     "main.502d3e52.css.map": "/friend_tracker_app/static/css/main.502d3e52.css.map",
-    "main.379daf2d.js.map": "/friend_tracker_app/static/js/main.379daf2d.js.map",
+    "main.c8865585.js.map": "/friend_tracker_app/static/js/main.c8865585.js.map",
     "787.f6d1d568.chunk.js.map": "/friend_tracker_app/static/js/787.f6d1d568.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.502d3e52.css",
-    "static/js/main.379daf2d.js"
+    "static/js/main.c8865585.js"
   ]
 }
